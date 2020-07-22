@@ -34,9 +34,7 @@ class Metric(Model):
             self.metric_type = metric.metric_type
             self.parameter_names = metric.parameter_names
             self.unfrozen_mask = metric.unfrozen_mask
-            self.set_parameter_vector(
-                metric.get_parameter_vector(include_frozen=True),
-                include_frozen=True)
+            self.parameter_vector =  metric.get_parameter_vector(include_frozen=True)
             self.parameter_bounds = metric.parameter_bounds
             self.ndim = metric.ndim
             self.axes = metric.axes
